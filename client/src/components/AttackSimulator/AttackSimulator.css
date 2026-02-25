@@ -1,0 +1,51 @@
+.simulator { display: flex; flex-direction: column; gap: 20px; }
+
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sim-header h2 { font-size: 20px; margin-bottom: 6px; }
+.sim-header p  { font-size: 13px; color: #9ca3af; }
+
+.prevention-badge {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.prevention-badge.on  { background: #065f4630; color: #10b981; border: 1px solid #10b98150; }
+.prevention-badge.off { background: #7f1d1d30; color: #ef4444; border: 1px solid #ef444450; animation: pulse 1s infinite; }
+
+.sim-body { display: flex; flex-direction: column; gap: 20px; }
+.sim-form h3 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+
+.result-card { transition: all 0.3s; }
+.result-card.blocked  { border-color: #10b98160; }
+.result-card.succeeded { border-color: #ef444460; }
+.result-status {
+  font-size: 22px;
+  font-weight: 800;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.result-status.blocked   { background: #065f4630; color: #34d399; }
+.result-status.succeeded { background: #7f1d1d30; color: #f87171; }
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #1f2937;
+  font-size: 13px;
+}
+.detail-row span:first-child { color: #9ca3af; }
+.green { color: #10b981; }
+.red   { color: #ef4444; }
+.mono  { font-family: monospace; color: #60a5fa; }
+
+.attack-explanations { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.attack-exp { background: #1f2937; border-radius: 8px; padding: 16px; }
+.attack-exp h4 { color: #fbbf24; margin-bottom: 8px; font-size: 14px; }
+.attack-exp p  { font-size: 13px; color: #9ca3af; line-height: 1.6; }
