@@ -27,8 +27,8 @@ blockchain/config/contractAddresses.json
 # ========================
 # Backend Generated Files
 # ========================
-backend/config/contractAddresses.json
-backend/config/abis/
+server/config/contractAddresses.json
+server/config/abis/
 
 # ========================
 # Frontend Build
