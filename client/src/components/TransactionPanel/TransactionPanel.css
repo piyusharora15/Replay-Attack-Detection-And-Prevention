@@ -1,0 +1,12 @@
+.tx-panel { display: flex; flex-direction: column; gap: 20px; }
+.panel-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.card h3 { font-size: 15px; font-weight: 600; margin-bottom: 16px; color: #f1f5f9; }
+.form-group { margin-bottom: 14px; }
+.balance-card { overflow-x: auto; }
+.balance-table, .tx-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.balance-table th, .tx-table th { text-align: left; padding: 8px; color: #6b7280; border-bottom: 1px solid #1f2937; font-weight: 600; }
+.balance-table td, .tx-table td { padding: 10px 8px; border-bottom: 1px solid #1f293750; }
+.mono { font-family: monospace; color: #60a5fa; }
+.message { padding: 14px; border-radius: 8px; font-size: 14px; }
+.message.success { background: #065f4630; border: 1px solid #10b98150; color: #34d399; }
+.message.error { background: #7f1d1d30; border: 1px solid #ef444450; color: #f87171; }
