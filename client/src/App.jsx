@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { AppProvider } from "./context/AppContext";
+import Navbar from "./components/Navbar/Navbar";
+import Dashboard from "./components/Dashboard/Dashboard";
+import TransactionPanel from "./components/TransactionPanel/TransactionPanel";
+import AttackSimulator from "./components/AttackSimulator/AttackSimulator";
+import AttackLog from "./components/AttackLog/AttackLog";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [activeTab, setActiveTab] = useState("dashboard");
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <AppProvider>
+      <div className="app">
+        <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+        <main className="main-content">
+          {activeTab === "dashboard" && <Dashboard />}
+          {activeTab === "transactions" && <TransactionPanel />}
+          {activeTab === "simulator" && <AttackSimulator />}
+          {activeTab === "logs" && <AttackLog />}
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </AppProvider>
+  );
 }
-
-export default App
