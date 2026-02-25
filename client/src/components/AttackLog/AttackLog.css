@@ -1,0 +1,11 @@
+.attack-log { display: flex; flex-direction: column; gap: 20px; }
+.log-header { display: flex; justify-content: space-between; align-items: center; }
+.log-header h2 { font-size: 20px; margin-bottom: 4px; }
+.log-header p  { font-size: 13px; color: #9ca3af; }
+.log-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.log-table th { text-align: left; padding: 10px 8px; color: #6b7280; border-bottom: 2px solid #1f2937; font-weight: 600; }
+.log-table td { padding: 10px 8px; border-bottom: 1px solid #1f293750; }
+.attack-succeeded td { background: #7f1d1d15; }
+.attack-type { color: #fbbf24; text-transform: capitalize; font-weight: 500; }
+.mono { font-family: monospace; color: #60a5fa; }
+.reason-cell { color: #9ca3af; max-width: 250px; font-size: 12px; }
