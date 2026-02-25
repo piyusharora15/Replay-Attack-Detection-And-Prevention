@@ -1,0 +1,55 @@
+.dashboard { display: flex; flex-direction: column; gap: 20px; }
+
+.notifications { display: flex; flex-direction: column; gap: 8px; }
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: slideIn 0.3s ease;
+}
+.notification.warning { background: #78350f30; border: 1px solid #f59e0b60; color: #fbbf24; }
+.notification.danger  { background: #7f1d1d30; border: 1px solid #ef444460; color: #f87171; }
+.notification button  { background: none; border: none; color: inherit; cursor: pointer; }
+
+@keyframes slideIn { from { transform: translateY(-10px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.stat-card {
+  background: #111827;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #1f2937;
+}
+.stat-blue  { border-top: 3px solid #3b82f6; }
+.stat-red   { border-top: 3px solid #ef4444; }
+.stat-green { border-top: 3px solid #10b981; }
+.stat-value { font-size: 32px; font-weight: 700; color: #f1f5f9; }
+.stat-icon  { font-size: 28px; }
+.stat-title { font-size: 13px; color: #9ca3af; }
+
+.chart-grid  { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.chart-title { font-size: 15px; font-weight: 600; color: #e2e8f0; margin-bottom: 16px; }
+.recent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2937;
+  font-size: 13px;
+}
+.recent-item:last-child { border-bottom: none; }
+.address { color: #60a5fa; font-family: monospace; }
+.recent-meta { display: flex; gap: 8px; align-items: center; }
+.amount { color: #9ca3af; }
+.attack-type { color: #fbbf24; text-transform: capitalize; }
+.no-data { color: #4b5563; font-size: 13px; padding: 20px 0; text-align: center; }
+.loading { color: #9ca3af; padding: 40px; text-align: center; }
