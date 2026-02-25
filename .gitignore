@@ -1,0 +1,71 @@
+# ========================
+# Node Modules
+# ========================
+node_modules/
+**/node_modules/
+
+# ========================
+# Environment Variables
+# ========================
+.env
+.env.local
+.env.development
+.env.production
+**/.env
+
+# ========================
+# Hardhat / Blockchain
+# ========================
+blockchain/artifacts/
+blockchain/cache/
+blockchain/coverage/
+blockchain/coverage.json
+blockchain/typechain/
+blockchain/typechain-types/
+blockchain/config/contractAddresses.json
+
+# ========================
+# Backend Generated Files
+# ========================
+backend/config/contractAddresses.json
+backend/config/abis/
+
+# ========================
+# Frontend Build
+# ========================
+frontend/dist/
+frontend/.vite/
+
+# ========================
+# Logs
+# ========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+**/logs/
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ========================
+# Package Lock (optional)
+# ========================
+# Uncomment below if you want to ignore lock files
+# package-lock.json
+# yarn.lock
