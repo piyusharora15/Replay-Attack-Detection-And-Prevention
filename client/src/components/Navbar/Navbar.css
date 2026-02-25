@@ -1,0 +1,53 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  height: 60px;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand { display: flex; align-items: center; gap: 10px; }
+.brand-icon { font-size: 22px; }
+.brand-title { font-weight: 700; font-size: 16px; color: #f1f5f9; white-space: nowrap; }
+
+.navbar-tabs { display: flex; gap: 4px; flex: 1; justify-content: center; }
+
+.tab-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.tab-btn:hover { background: #1f2937; color: #e2e8f0; }
+.tab-btn.active { background: #1d4ed820; color: #60a5fa; border: 1px solid #3b82f640; }
+
+.navbar-right { display: flex; align-items: center; gap: 16px; }
+
+.prevention-toggle { display: flex; align-items: center; gap: 8px; }
+.toggle-label { font-size: 13px; color: #9ca3af; }
+.toggle-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.toggle-btn.on { background: #065f46; color: #10b981; }
+.toggle-btn.off { background: #7f1d1d; color: #ef4444; animation: pulse 1s infinite; }
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+.connection-dot { font-size: 13px; }
+.connection-dot.connected { color: #10b981; }
+.connection-dot.disconnected { color: #9ca3af; }
